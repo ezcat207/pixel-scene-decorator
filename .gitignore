@@ -1,0 +1,17 @@
+# 本地才有的真实素材（从付费教程/飞书资源里裁出来的，不确定能不能公开分发）
+assets/production_sheets/八合里火锅/
+assets/production_sheets/森林动物/
+assets/reference_sheets/
+
+# 本地完整清单（含真实素材路径），公开demo用 manifest.sample.json 代替
+assets/manifest.json
+
+# 付费教程PDF的转录内容，不进公开仓库
+docs/
+
+# 杂项
+server.log
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel

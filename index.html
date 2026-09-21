@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>像素场景装饰工坊</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>像素场景装饰工坊</h1>
+  <a href="splitter/index.html" class="link-btn">拆素材 →</a>
+  <div class="room-size-control">
+    <label>房间尺寸
+      <input type="number" id="roomCols" min="4" max="40" value="14"> ×
+      <input type="number" id="roomRows" min="4" max="40" value="10"> 格
+    </label>
+    <button id="applyRoomSize">应用</button>
+    <label class="row-check"><input type="checkbox" id="snapToggle" checked> 对齐网格</label>
+  </div>
+  <div class="actions">
+    <select id="loadSelect"><option value="">载入已保存布局…</option></select>
+    <button id="saveLayoutBtn">保存布局</button>
+    <button id="exportJsonBtn">导出JSON</button>
+    <label class="file-btn">导入JSON<input type="file" id="importJsonInput" accept="application/json" hidden></label>
+    <button id="exportPngBtn">导出图片</button>
+    <button id="clearBtn" class="danger">清空</button>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="palette">
+    <div class="palette-controls">
+      <select id="themeSelect"></select>
+      <div class="category-tabs" id="categoryTabs"></div>
+    </div>
+
+    <div id="levelPanel" class="level-panel" hidden>
+      <label>关卡（还原原图）
+        <select id="levelSelect"></select>
+      </label>
+      <div class="level-actions">
+        <button id="shuffleBtn">打乱</button>
+        <button id="solveBtn">一键拼好</button>
+      </div>
+      <label class="row-check"><input type="checkbox" id="refOverlayToggle"> 显示原图参考（半透明）</label>
+    </div>
+
+    <div id="inspirationPanel" class="inspiration-panel" hidden>
+      <p class="hint">灵感参考图（不是标准答案，仅供摆放时参考构图）：</p>
+      <img alt="灵感参考图">
+    </div>
+
+    <div class="palette-grid" id="paletteGrid"></div>
+    <p class="hint">拖动素材到右侧房间里摆放；点击已放置的物件可选中，用底部工具栏调整。</p>
+  </aside>
+
+  <section class="stage-wrap">
+    <div class="stage-scroll">
+      <div id="room" class="room"></div>
+    </div>
+  </section>
+</main>
+
+<div id="itemToolbar" class="item-toolbar" hidden>
+  <button id="bringFrontBtn" title="置于最前">⬆ 置顶</button>
+  <button id="flipBtn" title="左右翻转">⇋ 翻转</button>
+  <button id="deleteItemBtn" title="删除 (Delete)">🗑 删除</button>
+</div>
+
+<canvas id="exportCanvas" hidden></canvas>
+
+<script src="src/main.js"></script>
+</body>
+</html>

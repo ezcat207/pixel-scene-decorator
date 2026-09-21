@@ -1,0 +1,62 @@
+{
+  "gridUnit": 64,
+  "items": [
+    {
+      "id": "示例主题/decor/盆栽",
+      "theme": "示例主题",
+      "category": "decor",
+      "name": "盆栽",
+      "file": "assets/production_sheets/示例主题/decor/盆栽__64x64.png",
+      "w": 64,
+      "h": 64,
+      "gridW": 1,
+      "gridH": 1
+    },
+    {
+      "id": "示例主题/floor/木地板",
+      "theme": "示例主题",
+      "category": "floor",
+      "name": "木地板",
+      "file": "assets/production_sheets/示例主题/floor/木地板__64x64.png",
+      "w": 64,
+      "h": 64,
+      "gridW": 1,
+      "gridH": 1
+    },
+    {
+      "id": "示例主题/furniture/方桌",
+      "theme": "示例主题",
+      "category": "furniture",
+      "name": "方桌",
+      "file": "assets/production_sheets/示例主题/furniture/方桌__128x64.png",
+      "w": 128,
+      "h": 64,
+      "gridW": 2,
+      "gridH": 1
+    },
+    {
+      "id": "示例主题/furniture/椅子",
+      "theme": "示例主题",
+      "category": "furniture",
+      "name": "椅子",
+      "file": "assets/production_sheets/示例主题/furniture/椅子__64x64.png",
+      "w": 64,
+      "h": 64,
+      "gridW": 1,
+      "gridH": 1
+    },
+    {
+      "id": "示例主题/wall/砖墙",
+      "theme": "示例主题",
+      "category": "wall",
+      "name": "砖墙",
+      "file": "assets/production_sheets/示例主题/wall/砖墙__64x96.png",
+      "w": 64,
+      "h": 96,
+      "gridW": 1,
+      "gridH": 2
+    }
+  ],
+  "layouts": [],
+  "themeExtras": {}
+}

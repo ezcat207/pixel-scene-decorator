@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>素材拆分器</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="splitter.css">
+</head>
+<body>
+<header class="topbar">
+  <h1>素材拆分器</h1>
+  <div class="actions">
+    <a href="../index.html" class="link-btn">← 回装饰游戏</a>
+  </div>
+</header>
+
+<main class="splitter-layout">
+  <aside class="params">
+    <div class="drop-zone" id="dropZone">
+      <p>拖入一张贴纸表 PNG<br>或点击选择文件</p>
+      <input type="file" id="fileInput" accept="image/png" hidden>
+    </div>
+    <div id="sourceInfo" class="hint"></div>
+
+    <label>背景容差（仅在图片没有透明通道时生效）
+      <input type="range" id="tolerance" min="0" max="100" value="28">
+      <span id="toleranceVal">28</span>
+    </label>
+    <label>最小面积 (px²)
+      <input type="number" id="minArea" value="64" min="1">
+    </label>
+    <label>裁切留白 (px)
+      <input type="number" id="padding" value="8" min="0">
+    </label>
+    <label>补齐为倍数 (px，0=不补齐)
+      <input type="number" id="snapMultiple" value="64" min="0">
+    </label>
+    <label>主题名（写入文件夹用）
+      <input type="text" id="themeName" placeholder="例如 八合里火锅">
+    </label>
+    <label>默认分类
+      <select id="defaultCategory">
+        <option value="furniture">家具 furniture</option>
+        <option value="floor">地板 floor</option>
+        <option value="wall">墙体 wall</option>
+        <option value="prop">道具 prop</option>
+        <option value="decor">装饰 decor</option>
+      </select>
+    </label>
+
+    <button id="detectBtn" disabled>识别拆分</button>
+    <p class="hint">识别之后可以在右侧逐个调整名称/分类，取消勾选可以剔除误识别的碎片。</p>
+
+    <div class="export-block">
+      <button id="pickDirBtn">选择 production_sheets 目录…</button>
+      <div id="dirStatus" class="hint">尚未选择目录，导出会改用逐个下载。</div>
+      <button id="exportBtn" disabled>导出选中项</button>
+    </div>
+  </aside>
+
+  <section class="results">
+    <div id="resultGrid" class="result-grid"></div>
+  </section>
+</main>
+
+<canvas id="workCanvas" hidden></canvas>
+<script src="splitter.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+.link-btn { color: #eee7f5; text-decoration: none; padding: 5px 9px; }
+.link-btn:hover { text-decoration: underline; }
+
+.splitter-layout { flex: 1; display: flex; overflow: hidden; }
+
+.params {
+  width: 300px;
+  min-width: 240px;
+  background: #241f30;
+  border-right: 2px solid #443a5a;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+}
+.params label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+.params input, .params select { width: 100%; }
+
+.drop-zone {
+  border: 2px dashed #574a76;
+  border-radius: 8px;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: .85;
+}
+.drop-zone.dragover { background: #322a44; border-color: #8a6fc0; }
+
+.export-block { margin-top: auto; display: flex; flex-direction: column; gap: 6px; }
+
+.results { flex: 1; overflow-y: auto; padding: 14px; }
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+.result-card {
+  background: #241f30;
+  border: 1px solid #443a5a;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.result-card.excluded { opacity: .4; }
+.result-card canvas {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  background-image: linear-gradient(45deg, #3a3150 25%, transparent 25%),
+    linear-gradient(-45deg, #3a3150 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #3a3150 75%),
+    linear-gradient(-45deg, transparent 75%, #3a3150 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+  image-rendering: pixelated;
+}
+.result-card input, .result-card select { font-size: 12px; }
+.result-card .row { display: flex; gap: 4px; align-items: center; }
+.result-card .dims { font-size: 10px; opacity: .6; }
