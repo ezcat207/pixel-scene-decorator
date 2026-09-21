@@ -1,12 +1,4 @@
-# 本地才有的真实素材（从付费教程/飞书资源里裁出来的，不确定能不能公开分发）
-assets/production_sheets/八合里火锅/
-assets/production_sheets/森林动物/
-assets/reference_sheets/
-
-# 本地完整清单（含真实素材路径），公开demo用 manifest.sample.json 代替
-assets/manifest.json
-
-# 付费教程PDF的转录内容，不进公开仓库
+# 付费教程PDF的转录内容，不进公开仓库（图片素材本身经用户确认可以公开，这份文字转录不在授权范围内）
 docs/
 
 # 杂项

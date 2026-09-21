@@ -1,0 +1,372 @@
+[
+  {
+    "sheetId": "餐台",
+    "theme": "八合里火锅",
+    "sourceWidth": 1222,
+    "sourceHeight": 1287,
+    "referenceImage": "assets/reference_sheets/八合里火锅/餐台.png",
+    "items": [
+      {
+        "assetId": "八合里火锅/furniture/餐台01",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台01__704x640.png",
+        "x": -1,
+        "y": -1,
+        "w": 704,
+        "h": 640
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台02",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台02__512x384.png",
+        "x": 705,
+        "y": 6,
+        "w": 512,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台03",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台03__192x320.png",
+        "x": 1033,
+        "y": 370,
+        "w": 192,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台04",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台04__384x256.png",
+        "x": 660,
+        "y": 414,
+        "w": 384,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台05",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台05__512x320.png",
+        "x": 8,
+        "y": 631,
+        "w": 512,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台06",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台06__320x256.png",
+        "x": 900,
+        "y": 670,
+        "w": 320,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台07",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台07__384x256.png",
+        "x": 522,
+        "y": 672,
+        "w": 384,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台08",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台08__256x384.png",
+        "x": 796,
+        "y": 906,
+        "w": 256,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台09",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台09__320x256.png",
+        "x": 21,
+        "y": 909,
+        "w": 320,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台10",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台10__256x256.png",
+        "x": 344,
+        "y": 930,
+        "w": 256,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台11",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台11__256x320.png",
+        "x": 581,
+        "y": 933,
+        "w": 256,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台12",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台12__192x320.png",
+        "x": 1027,
+        "y": 951,
+        "w": 192,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台13",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台13__192x192.png",
+        "x": 268,
+        "y": 1111,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台14",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台14__128x128.png",
+        "x": 167,
+        "y": 1146,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐台15",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐台15__192x128.png",
+        "x": -2,
+        "y": 1150,
+        "w": 192,
+        "h": 128
+      }
+    ]
+  },
+  {
+    "sheetId": "厨具",
+    "theme": "八合里火锅",
+    "sourceWidth": 1222,
+    "sourceHeight": 1287,
+    "referenceImage": "assets/reference_sheets/八合里火锅/厨具.png",
+    "items": [
+      {
+        "assetId": "八合里火锅/furniture/厨具01",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具01__448x448.png",
+        "x": 18,
+        "y": 4,
+        "w": 448,
+        "h": 448
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具02",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具02__448x448.png",
+        "x": 445,
+        "y": 5,
+        "w": 448,
+        "h": 448
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具03",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具03__384x448.png",
+        "x": 858,
+        "y": 23,
+        "w": 384,
+        "h": 448
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具04",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具04__384x384.png",
+        "x": -6,
+        "y": 452,
+        "w": 384,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具05",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具05__320x384.png",
+        "x": 360,
+        "y": 441,
+        "w": 320,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具06",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具06__256x320.png",
+        "x": 976,
+        "y": 485,
+        "w": 256,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具07",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具07__320x320.png",
+        "x": 671,
+        "y": 502,
+        "w": 320,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具08",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具08__256x256.png",
+        "x": 15,
+        "y": 816,
+        "w": 256,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具09",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具09__256x256.png",
+        "x": 248,
+        "y": 815,
+        "w": 256,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具10",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具10__128x128.png",
+        "x": 935,
+        "y": 833,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具11",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具11__128x128.png",
+        "x": 835,
+        "y": 839,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具12",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具12__192x192.png",
+        "x": 470,
+        "y": 846,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具13",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具13__128x128.png",
+        "x": 1067,
+        "y": 859,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具14",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具14__192x192.png",
+        "x": 643,
+        "y": 849,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具15",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具15__192x192.png",
+        "x": 938,
+        "y": 944,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具16",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具16__128x128.png",
+        "x": 1001,
+        "y": 920,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具17",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具17__128x128.png",
+        "x": 848,
+        "y": 943,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具18",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具18__128x128.png",
+        "x": 1084,
+        "y": 967,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具19",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具19__128x192.png",
+        "x": 742,
+        "y": 1002,
+        "w": 128,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具20",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具20__128x192.png",
+        "x": 643,
+        "y": 1019,
+        "w": 128,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具21",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具21__128x192.png",
+        "x": 863,
+        "y": 1032,
+        "w": 128,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具22",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具22__128x192.png",
+        "x": 145,
+        "y": 1021,
+        "w": 128,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具23",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具23__128x128.png",
+        "x": 263,
+        "y": 1047,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具24",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具24__128x128.png",
+        "x": 18,
+        "y": 1051,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具25",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具25__192x128.png",
+        "x": 470,
+        "y": 1040,
+        "w": 192,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具26",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具26__128x128.png",
+        "x": 367,
+        "y": 1041,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具27",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具27__128x256.png",
+        "x": 1071,
+        "y": 1047,
+        "w": 128,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具28",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具28__128x128.png",
+        "x": 913,
+        "y": 1105,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/厨具29",
+        "file": "assets/production_sheets/八合里火锅/furniture/厨具29__128x128.png",
+        "x": 981,
+        "y": 1105,
+        "w": 128,
+        "h": 128
+      }
+    ]
+  }
+]
