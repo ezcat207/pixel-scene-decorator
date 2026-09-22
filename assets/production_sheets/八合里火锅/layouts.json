@@ -368,5 +368,246 @@
         "h": 128
       }
     ]
+  },
+  {
+    "sheetId": "餐桌",
+    "theme": "八合里火锅",
+    "sourceWidth": 1287,
+    "sourceHeight": 1222,
+    "referenceImage": "assets/reference_sheets/八合里火锅/餐桌.png",
+    "items": [
+      {
+        "assetId": "八合里火锅/furniture/餐桌01",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌01__384x384.png",
+        "x": 451,
+        "y": -6,
+        "w": 384,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌02",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌02__448x448.png",
+        "x": 836,
+        "y": 18,
+        "w": 448,
+        "h": 448
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌03",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌03__256x256.png",
+        "x": 215,
+        "y": 15,
+        "w": 256,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌04",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌04__128x128.png",
+        "x": 108,
+        "y": 18,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌05",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌05__192x128.png",
+        "x": 74,
+        "y": 145,
+        "w": 192,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌06",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌06__256x256.png",
+        "x": 217,
+        "y": 248,
+        "w": 256,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌07",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌07__128x128.png",
+        "x": 113,
+        "y": 263,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌08",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌08__384x320.png",
+        "x": 463,
+        "y": 360,
+        "w": 384,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌09",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌09__128x128.png",
+        "x": 118,
+        "y": 367,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌10",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌10__448x448.png",
+        "x": 834,
+        "y": 445,
+        "w": 448,
+        "h": 448
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌11",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌11__128x192.png",
+        "x": 119,
+        "y": 470,
+        "w": 128,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌12",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌12__192x192.png",
+        "x": 249,
+        "y": 470,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌13",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌13__192x192.png",
+        "x": 246,
+        "y": 643,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌14",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌14__192x128.png",
+        "x": 76,
+        "y": 643,
+        "w": 192,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌15",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌15__320x320.png",
+        "x": 466,
+        "y": 671,
+        "w": 320,
+        "h": 320
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌16",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌16__192x128.png",
+        "x": 93,
+        "y": 742,
+        "w": 192,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌17",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌17__128x128.png",
+        "x": 321,
+        "y": 835,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌18",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌18__128x128.png",
+        "x": 216,
+        "y": 848,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌19",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌19__192x128.png",
+        "x": 64,
+        "y": 863,
+        "w": 192,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌20",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌20__448x384.png",
+        "x": 816,
+        "y": 858,
+        "w": 448,
+        "h": 384
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌21",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌21__128x128.png",
+        "x": 54,
+        "y": 913,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌22",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌22__128x128.png",
+        "x": 327,
+        "y": 935,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌23",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌23__192x192.png",
+        "x": 151,
+        "y": 938,
+        "w": 192,
+        "h": 192
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌24",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌24__320x256.png",
+        "x": 482,
+        "y": 976,
+        "w": 320,
+        "h": 256
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌25",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌25__128x128.png",
+        "x": 54,
+        "y": 981,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌26",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌26__128x128.png",
+        "x": 240,
+        "y": 1001,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌27",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌27__128x128.png",
+        "x": 301,
+        "y": 1067,
+        "w": 128,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌28",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌28__256x128.png",
+        "x": -15,
+        "y": 1071,
+        "w": 256,
+        "h": 128
+      },
+      {
+        "assetId": "八合里火锅/furniture/餐桌29",
+        "file": "assets/production_sheets/八合里火锅/furniture/餐桌29__128x128.png",
+        "x": 193,
+        "y": 1084,
+        "w": 128,
+        "h": 128
+      }
+    ]
   }
 ]

@@ -7,6 +7,12 @@
 
 const CATEGORY_LABELS = { floor: "地板", wall: "墙体", furniture: "家具", prop: "道具", decor: "装饰" };
 const CATEGORY_ORDER = ["floor", "wall", "furniture", "prop", "decor"];
+// BHLHG04 同时包含完整餐桌和桌面/椅子等零件。MVP 先把明显的零件重复项留在
+// 素材目录中但不放进调色板，避免用户误把“半张桌子”与完整桌子叠加使用。
+const HIDDEN_MVP_ASSETS = new Set([
+  ...[3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 29]
+    .map(n => `八合里火锅/furniture/餐桌${String(n).padStart(2, "0")}`),
+]);
 const STORAGE_PREFIX = "decorator:layout:";
 const DEFAULT_ROOM_COLS = 14, DEFAULT_ROOM_ROWS = 10;
 
@@ -79,6 +85,27 @@ function addReferenceLayouts() {
       item(12, 770, 1120),
     ],
   };
+
+  const hotpot = manifest.themeExtras["八合里火锅"];
+  if (hotpot && hotpot.background && !hotpot.referenceLayout) {
+    const table = (assetId, x, y, instanceId) => ({ assetId, x, y, instanceId });
+    hotpot.referenceLayout = {
+      sheetId: "目标场景预设",
+      theme: "八合里火锅",
+      sourceWidth: hotpot.background.w,
+      sourceHeight: hotpot.background.h,
+      referenceLayout: true,
+      keepBackground: true,
+      referenceImage: hotpot.inspiration?.file,
+      // 只放目标图中最重要的四张完整餐桌；背景已包含墙边柜台和冰箱。
+      items: [
+        table("八合里火锅/furniture/餐桌02", 116, 470, "top-left"),
+        table("八合里火锅/furniture/餐桌10", 664, 470, "top-right"),
+        table("八合里火锅/furniture/餐桌20", 116, 850, "bottom-left"),
+        table("八合里火锅/furniture/餐桌02", 664, 850, "bottom-right"),
+      ],
+    };
+  }
 }
 
 function themes() {
@@ -126,12 +153,13 @@ function buildCategoryTabs() {
 function renderPalette() {
   paletteGrid.innerHTML = "";
   const list = manifest.items.filter(i =>
-    i.theme === currentTheme && (currentCategory === "all" || i.category === currentCategory)
+    i.theme === currentTheme && !HIDDEN_MVP_ASSETS.has(i.id) &&
+    (currentCategory === "all" || i.category === currentCategory)
   );
   for (const item of list) {
     const card = document.createElement("div");
     card.className = "palette-item";
-    card.innerHTML = `<img src="${item.file}" alt="${item.name}" draggable="false">
+    card.innerHTML = `<img src="${item.file}" alt="${item.name}" draggable="false" loading="lazy" decoding="async">
       <div class="label">${item.name}</div>
       <div class="size">${item.w}×${item.h} · ${CATEGORY_LABELS[item.category]}</div>`;
     card.addEventListener("pointerdown", (e) => startPaletteDrag(e, item));
@@ -236,14 +264,16 @@ function shuffleLevel() {
 function solveLevel() {
   if (!activeLevel) return;
   const key = sheetKeyOf(activeLevel);
-  const existing = new Map(placed.filter(p => p.sheetKey === key).map(p => [p.assetId, p]));
+  const layoutKey = (it) => `${it.assetId}#${it.instanceId || ""}`;
+  const existing = new Map(placed.filter(p => p.sheetKey === key).map(p => [layoutKey(p), p]));
   for (const orig of activeLevel.items) {
-    let p = existing.get(orig.assetId);
+    let p = existing.get(layoutKey(orig));
     if (!p) {
       p = {
         uid: "p" + (++insertCounter), assetId: orig.assetId,
         x: orig.x, y: orig.y, flipped: !!orig.flipped,
         order: insertCounter, manualFront: false, sheetKey: key,
+        ...(orig.instanceId ? { instanceId: orig.instanceId } : {}),
       };
       placed.push(p);
     } else {
