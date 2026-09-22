@@ -10,7 +10,7 @@ const CATEGORY_ORDER = ["floor", "wall", "furniture", "prop", "decor"];
 // BHLHG04 同时包含完整餐桌和桌面/椅子等零件。MVP 先把明显的零件重复项留在
 // 素材目录中但不放进调色板，避免用户误把“半张桌子”与完整桌子叠加使用。
 const HIDDEN_MVP_ASSETS = new Set([
-  ...[3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 16, 17, 18, 19, 21, 22, 23, 25, 26, 27, 28, 29]
+  ...[3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 16, 28, 29]
     .map(n => `八合里火锅/furniture/餐桌${String(n).padStart(2, "0")}`),
 ]);
 const STORAGE_PREFIX = "decorator:layout:";
@@ -106,6 +106,32 @@ function addReferenceLayouts() {
       ],
     };
   }
+
+  // 迷你关卡：从一张空桌开始，把桌面上的小像素物件重新摆回去。
+  // 这些物件原本来自“餐桌”素材表的独立连通域，不把复合餐桌当作零件使用。
+  if (hotpot && hotpot.miniLevels === undefined) {
+    const item = (assetId, x, y) => ({ assetId, x, y });
+    hotpot.miniLevels = [{
+      sheetId: "桌面小拼图",
+      theme: "八合里火锅",
+      sourceWidth: 640,
+      sourceHeight: 512,
+      referenceLayout: true,
+      keepBackground: false,
+      items: [
+        item("八合里火锅/furniture/餐桌08", 128, 96),
+        item("八合里火锅/furniture/餐桌17", 256, 188), // 空锅
+        item("八合里火锅/furniture/餐桌18", 260, 186), // 锅底
+        item("八合里火锅/furniture/餐桌19", 164, 206), // 小碟组合
+        item("八合里火锅/furniture/餐桌21", 176, 132), // 小料
+        item("八合里火锅/furniture/餐桌22", 362, 144), // 小碟
+        item("八合里火锅/furniture/餐桌23", 316, 112), // 白菜与杯子
+        item("八合里火锅/furniture/餐桌25", 352, 238), // 小料
+        item("八合里火锅/furniture/餐桌26", 206, 246), // 杯子
+        item("八合里火锅/furniture/餐桌27", 390, 204), // 茶壶
+      ],
+    }];
+  }
 }
 
 function themes() {
@@ -118,6 +144,7 @@ function levelsForTheme(theme) {
   // 为它提供一个可编辑的“参考布局”，让一键拼好真正有内容可执行。
   const extras = (manifest.themeExtras || {})[theme];
   if (extras && extras.referenceLayout) levels.push(extras.referenceLayout);
+  if (extras && extras.miniLevels) levels.push(...extras.miniLevels);
   return levels;
 }
 
