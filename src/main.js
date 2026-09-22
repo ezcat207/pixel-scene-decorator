@@ -47,6 +47,38 @@ async function loadManifest() {
   GRID = manifest.gridUnit || 64;
   manifest.layouts = manifest.layouts || [];
   manifest.themeExtras = manifest.themeExtras || {};
+  addReferenceLayouts();
+}
+
+function addReferenceLayouts() {
+  const extras = manifest.themeExtras["森林动物"];
+  if (!extras || !extras.background || extras.referenceLayout) return;
+  const item = (n, x, y, flipped = false) => ({
+    assetId: `森林动物/decor/动物组合${String(n).padStart(2, "0")}`,
+    x, y, flipped,
+  });
+  extras.referenceLayout = {
+    sheetId: "灵感参考布局",
+    theme: "森林动物",
+    sourceWidth: extras.background.w,
+    sourceHeight: extras.background.h,
+    referenceLayout: true,
+    keepBackground: true,
+    items: [
+      item(1, 52, 210),
+      item(2, 372, 120),
+      item(3, 700, 180),
+      item(4, 742, 690),
+      item(5, 364, 886),
+      item(6, 48, 666),
+      item(7, 496, 586),
+      item(8, 820, 450),
+      item(9, 700, 992),
+      item(10, 82, 1084),
+      item(11, 500, 1080),
+      item(12, 770, 1120),
+    ],
+  };
 }
 
 function themes() {
@@ -54,7 +86,12 @@ function themes() {
 }
 
 function levelsForTheme(theme) {
-  return manifest.layouts.filter(l => l.theme === theme);
+  const levels = manifest.layouts.filter(l => l.theme === theme);
+  // 森林动物不是从一张贴纸表切出来的拼图关卡，但它有一张灵感参考图。
+  // 为它提供一个可编辑的“参考布局”，让一键拼好真正有内容可执行。
+  const extras = (manifest.themeExtras || {})[theme];
+  if (extras && extras.referenceLayout) levels.push(extras.referenceLayout);
+  return levels;
 }
 
 function buildThemeSelect() {
@@ -114,8 +151,14 @@ function refreshLevelPanel() {
   activeLevel = null;
   if (levels.length === 0) {
     levelPanel.hidden = true;
+    el("refOverlayToggle").closest("label").hidden = false;
   } else {
     levelPanel.hidden = false;
+    const hasReferenceLayout = levels.some(l => l.referenceLayout);
+    levelPanel.querySelector("label").firstChild.textContent = hasReferenceLayout
+      ? "预设布局"
+      : "关卡（还原原图）";
+    el("refOverlayToggle").closest("label").hidden = !levels.some(l => l.referenceImage);
     levelSelect.innerHTML = '<option value="">（自由摆放）</option>';
     for (const lvl of levels) {
       const opt = document.createElement("option");
@@ -163,7 +206,8 @@ levelSelect.addEventListener("change", () => {
   roomW = activeLevel.sourceWidth;
   roomH = activeLevel.sourceHeight;
   sizeRoom();
-  shuffleLevel();
+  if (activeLevel.referenceLayout) solveLevel();
+  else shuffleLevel();
 });
 
 el("shuffleBtn").addEventListener("click", shuffleLevel);
@@ -192,11 +236,22 @@ function shuffleLevel() {
 function solveLevel() {
   if (!activeLevel) return;
   const key = sheetKeyOf(activeLevel);
-  for (const p of placed) {
-    if (p.sheetKey !== key) continue;
-    const orig = activeLevel.items.find(it => it.assetId === p.assetId);
-    if (orig) { p.x = orig.x; p.y = orig.y; }
+  const existing = new Map(placed.filter(p => p.sheetKey === key).map(p => [p.assetId, p]));
+  for (const orig of activeLevel.items) {
+    let p = existing.get(orig.assetId);
+    if (!p) {
+      p = {
+        uid: "p" + (++insertCounter), assetId: orig.assetId,
+        x: orig.x, y: orig.y, flipped: !!orig.flipped,
+        order: insertCounter, manualFront: false, sheetKey: key,
+      };
+      placed.push(p);
+    } else {
+      p.x = orig.x; p.y = orig.y;
+      if (orig.flipped !== undefined) p.flipped = !!orig.flipped;
+    }
   }
+  selectedUid = null;
   renderPlaced();
 }
 
@@ -233,7 +288,7 @@ function renderPlaced() {
   roomEl.innerHTML = "";
 
   const extras = themeExtras();
-  if (!activeLevel && extras && extras.background) {
+  if (extras && extras.background && (!activeLevel || activeLevel.keepBackground)) {
     const bg = document.createElement("img");
     bg.className = "room-background";
     bg.src = extras.background.file;
@@ -241,7 +296,7 @@ function renderPlaced() {
     roomEl.appendChild(bg);
   }
 
-  if (activeLevel && el("refOverlayToggle").checked) {
+  if (activeLevel && activeLevel.referenceImage && el("refOverlayToggle").checked) {
     const ref = document.createElement("img");
     ref.className = "room-reference";
     ref.src = activeLevel.referenceImage;

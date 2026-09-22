@@ -73,6 +73,7 @@ button.danger:hover { background: #742836; }
   gap: 6px;
   font-size: 12px;
 }
+.level-panel[hidden], .inspiration-panel[hidden], .row-check[hidden] { display: none; }
 .level-panel label { display: flex; flex-direction: column; gap: 3px; }
 .level-panel select { width: 100%; }
 .level-actions { display: flex; gap: 6px; }
